@@ -1,14 +1,15 @@
 /**
+ * setDateout()
+ *
  * Solves the 32-bit integer overflow issue.
  * (code modified from http://stackoverflow.com/a/18182660)
  *
- * @param  {[type]}   date [description]
- * @param  {Function} fn   [description]
- * @return {[type]}        [description]
+ * @param  {Function} fn
+ * @param  {Date}   date
+ * @return {Timeout}
  */
 
-module.exports = function runAtDate(date, fn) {
-  // console.log('runAtDate()', date, fn);
+module.exports = function setDateout(fn, date) {
 
   // Cast `date` to a javascript Date
   if (typeof date !== 'object' || !date instanceof Date) {
@@ -17,16 +18,16 @@ module.exports = function runAtDate(date, fn) {
 
   var now = (new Date()).getTime();
   var then = date.getTime();
-  var diff = Math.max((then - now), 0);
+  var msDiff = Math.max((then - now), 0);
 
 
   //setTimeout limit is MAX_INT32=(2^31-1)
-  if (diff > 0x7FFFFFFF) {
+  if (msDiff > 0x7FFFFFFF) {
     // console.log('Scheduling a timer for %s', date);
-    return setTimeout(function() {runAtDate(date, fn);}, 0x7FFFFFFF);
+    return setTimeout(function() {setDateout(fn, date);}, 0x7FFFFFFF);
   }
   else {
-    // console.log('Scheduling a timer in %s ms', diff);
-    return setTimeout(fn, diff);
+    // console.log('Scheduling a timer in %s ms', msDiff);
+    return setTimeout(fn, msDiff);
   }
 };

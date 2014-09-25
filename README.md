@@ -16,9 +16,9 @@ $ npm install set-dateout
 ```javascript
 var setDateout = require('set-dateout');
 
-setDateout(new Date('January 1, 2100'), function (){
+setDateout(function (){
   console.log('yeah!! it\'s a new century, baby!!');
-});
+}, new Date('January 1, 2100'));
 ```
 
 
