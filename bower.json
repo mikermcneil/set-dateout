@@ -1,0 +1,34 @@
+{
+  "name": "set-dateout",
+  "main": "index.js",
+  "version": "v0.10.1",
+  "homepage": "https://github.com/mikermcneil/set-dateout",
+  "authors": [
+    "Mike McNeil"
+  ],
+  "description": "Run a function at the specified JavaScript date",
+  "keywords": [
+    "setTimeout",
+    "date",
+    "schedule",
+    "long-running-process"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "dependencies",
+    "example",
+    "Gruntfile.js",
+    ".*",
+    "bower.json",
+    ".bower.json",
+    "LICENSE",
+    "README.md",
+    "dependencies",
+    "example",
+    "package.json",
+    "tests"
+  ]
+}
