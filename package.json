@@ -1,0 +1,25 @@
+{
+  "name": "set-dateout",
+  "version": "0.0.0",
+  "description": "Run a function at the specified JavaScript date",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mikermcneil/set-dateout.git"
+  },
+  "keywords": [
+    "setTimeout",
+    "date",
+    "schedule",
+    "long-running-process"
+  ],
+  "author": "Mike McNeil",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mikermcneil/set-dateout/issues"
+  },
+  "homepage": "https://github.com/mikermcneil/set-dateout"
+}
