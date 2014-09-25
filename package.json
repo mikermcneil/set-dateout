@@ -1,6 +1,6 @@
 {
   "name": "set-dateout",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Run a function at the specified JavaScript date",
   "main": "index.js",
   "scripts": {
